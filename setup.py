@@ -11,6 +11,8 @@ setup(
       name="basic-nn",
       version="0.1.0",
       author="Praveen Kumar",
+      license="Apache 2.0",
+      platform="",
       author_email="kr.praveen399@gmail.com",
       description="Implementation of neural network from scratch",
       url="https://github.com/ds-praveenkumar/coursera",
