@@ -21,4 +21,4 @@ class Sigmoid:
     
 if __name__=="__main__":
     sig = Sigmoid(0)
-    print(sig.sigmoid(Z=0))
+    
