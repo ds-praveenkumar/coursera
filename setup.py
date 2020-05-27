@@ -18,7 +18,8 @@ setup(
       url="https://github.com/ds-praveenkumar/coursera",
       packages=find_packages("basic-neural-network,basic-neural-network.utility"),
       install_requires=["pandas",
-                        "numpy"
+                        "numpy",
+                        "plotly==4.8"
                         ],
       python_requires='>=3.6'
       
