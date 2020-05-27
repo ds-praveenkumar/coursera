@@ -74,11 +74,24 @@ class BasicNeuralNetwork:
                 }
         return params,grads
     
-    def predict():
+    def predict(self,test,w,b):
         """
         
         """
-        pass
+        m = test.shape[1]
+        Y_predict = np.zeros((1,m))
+        w = w.reshape(test.shape[0],1)
+        
+        activation = activation_function.sigmoid(np.matmul(w.T,test)+b)
+        for i in range(activation.shape[1]):
+            
+            if activation[0,i] > 0.5:
+                Y_predict = 1
+                
+            else:
+                Y_predict = 0
+        print('Predictions: ',Y_predict)      
+        return Y_predict
     
     
 if __name__=='__main__':
@@ -91,5 +104,9 @@ if __name__=='__main__':
     w, b, X, Y = np.array([[1.],[2.]]), 2., np.array([[1.,2.,-1.],[3.,4.,-3.2]]), np.array([[1,0,1]])
     nn.propagation(X=X,Y=Y,w=nn.w,b=nn.b)
     nn.train(X=X,Y=Y,w=w,b=b,learning_rate=0.03,number_iteration=2900,print_iteration=True)
+    w = np.array([[0.1124579],[0.23106775]])
+    b = -0.3
+    test = np.array([[1.,-1.1,-3.2,2.9],[1.2,2.,0.1,2.10]])
+    nn.predict(test,w,b)
         
     
