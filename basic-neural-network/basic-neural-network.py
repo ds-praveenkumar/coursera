@@ -19,6 +19,7 @@ class BasicNeuralNetwork:
         """
             Initilizes Weight matrics and Bias to 0
         """
+        np.random.seed(123)
         self.w = np.zeros((self.dimensions,1))
         self.b = 0
         print('Neural Network Initilised: Weight_dimensions: {0}, b: {1}'.format(str(self.w.shape),str(self.b)))
